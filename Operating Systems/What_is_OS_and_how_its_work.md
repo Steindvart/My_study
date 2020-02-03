@@ -9,3 +9,6 @@
 Любой компьютер можно представить как связанную совокупность: **процессора, памяти и устройств ввода-вывода**.
 
 <img src="img\basic_architecture.png" width="450px" hidth="450px" hspace="25%">
+<details> <summary>Более подробная структура ПК</summary>
+    <img src="img\Motherboard_diagram_ru.jpg" width="450px" hidth="450px" hspace="25%">
+</details>
