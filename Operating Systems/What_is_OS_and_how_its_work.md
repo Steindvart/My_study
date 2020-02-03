@@ -8,4 +8,4 @@
 *Зачем нужна Операционная Система?* <br>
 Любой компьютер можно представить как связанную совокупность: **процессора, памяти и устройств ввода-вывода**.
 
-<img src="img\basic_architecture.png" width="450px" hidth="450px" style="margin: auto">
+<img src="img\basic_architecture.png" width="450px" hidth="450px" hspace="25%">
