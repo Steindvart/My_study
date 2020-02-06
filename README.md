@@ -5,6 +5,11 @@
 
 Изначально, весь материал разрабатывался в формате markdown-файлов, которые может отображать GitHub. Но сейчас, репозиторий разрабатывается как [сайт](https://kalashnikov-ivan.github.io/My_study/), размещённый с помощью gh-pages. 
 
+# Содержание
+<ol>
+    <li><a href="https://github.com/Kalashnikov-Ivan/My_study/blob/master/Topics/Operating_Systems/What_is_OS_and_how_its_work.md">Операционные системы</li>
+</ol>
+
 # Какой во всём этом смысл?
 Цель проекта — максимально последовательно и простым языком, насколько это возможно, объяснить сложные темы. 
 
