@@ -51,10 +51,61 @@ a {
 	text-decoration: none;
 }
 
+.history {
+    color: #4A5057;
+}
+
+.content_fig {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.content_fig figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
 .content_fig img {
-    margin-left: 27%;
+    margin-left: 25%;
+    padding-bottom: .5em;
 }
 
 .content_list > h3 {
     margin-bottom: -10px;
+}
+
+.glossary blockquote {
+    color: #4A5057;
+    border-left: .25em solid #c78438c0;
+}
+
+.glossary strong, b {
+    color: rgb(35, 53, 73);
+}
+
+.fig_and_glossary {
+    min-height: 450px;
+}
+
+.fig_and_glossary .content_fig {
+    margin-left: 0;
+    width: 50%;
+    float: left;
+}
+
+.fig_and_glossary .content_fig img {
+    margin-left: 0;
+}
+
+.fig_and_glossary .content_fig figcaption {
+    margin-right: 9%;
+}
+
+.fig_and_glossary .glossary {
+    display: flex;
+}
+
+#comp_layers {
+    margin-left: 10%;
 }
