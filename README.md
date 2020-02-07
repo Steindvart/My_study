@@ -7,7 +7,7 @@
 
 # Содержание
 <ol>
-    <li><a href="https://github.com/Kalashnikov-Ivan/My_study/blob/master/Topics/Operating_Systems/What_is_OS_and_how_its_work.md">Операционные системы</li>
+    <li><a href="https://github.com/Kalashnikov-Ivan/My_study/blob/master/Topics/Operating_Systems/What_is_OS_and_how_its_work.md">Операционные системы</a></li>
 </ol>
 
 # Какой во всём этом смысл?
