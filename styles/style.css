@@ -26,6 +26,10 @@ body {
     box-sizing: border-box;
 }
 
+footer {
+    height: 50px;
+}
+
 .content_box {
    /* position: relative;*/
     width: 65%;
