@@ -108,6 +108,25 @@ footer {
     font-weight: 700;
 }
 
+.nav_bar, .bread_crumps {
+    white-space: nowrap;
+}
+
+.bread_crumps {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.bread_crumps span {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
     margin-top: 1.5em;
