@@ -120,6 +120,7 @@ footer {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 1rem auto;
+    margin-left: 52px;
 }
 
 .bread_crumps span {
@@ -129,8 +130,8 @@ footer {
 
 .bread_crumps_separator::before {
 	content: '►';
-	font-size: .6rem;
-	padding: 0 .5rem;
+    padding: 0 .5rem;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
