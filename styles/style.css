@@ -79,6 +79,10 @@ figcaption {
     text-align: center;
 }
 
+li blockquote {
+    margin-top: 10px;
+}
+
 .content_box {
    /* position: relative;*/
     width: 65%;
