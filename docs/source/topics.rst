@@ -2,7 +2,9 @@
 =========
 
 .. toctree::
-   :maxdepth: 2
+    :includehidden:
+    :maxdepth: 3
+    :name: toc_topics
 
-   os_main
-   math
+    os_main
+    math
