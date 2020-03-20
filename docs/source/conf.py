@@ -62,6 +62,7 @@ exclude_patterns = []
 # -- Themes
 #html_theme = 'alabaster'
 
+html_logo = "_static/My_Study_logo-bold.svg"
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
     'canonical_url': '',
@@ -69,11 +70,11 @@ html_theme_options = {
     'display_version': False,
     'prev_next_buttons_location': '',
     'style_external_links': True,
-    'style_nav_header_background': '',
+    'style_nav_header_background': '#778899',
     # Toc options
     'collapse_navigation': False,
     'sticky_navigation': True,
-    'navigation_depth': 5,
+    'navigation_depth': 4,
     'includehidden': True,
     'titles_only': False
 }

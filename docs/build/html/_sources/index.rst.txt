@@ -6,8 +6,10 @@
 Index
 =========
 
+Главная навигация по сайту
+
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 5
 
    main
    topics

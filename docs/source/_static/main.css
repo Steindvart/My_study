@@ -1,3 +1,54 @@
 .wy-nav-content {
 	max-width: 1000px;
 }
+
+.wy-side-nav-search > a img.logo, .wy-side-nav-search .wy-dropdown > a img.logo {
+	/* display: block; */
+	margin: 0 auto;
+	padding: 0;
+	height: 40px;
+	width: auto;
+	border-radius: 0;
+	max-width: 100%;
+	background: transparent;
+}
+
+.rst-content div.figure p.caption {
+	margin-top: 16px;
+}
+
+.rst-content dl:not(.docutils) dt {
+	display: table;
+	margin: 6px 0;
+	font-size: 100%;
+	line-height: normal;
+	background: none;
+	color: #404040;
+	border-top: none;
+	padding: 0px;
+	position: relative;
+	font-weight: normal;
+}
+
+.rst-content div.figure p:last-child.caption {
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.rst-content .sidebar {
+	float: right;
+	width: 46%;
+	display: block;
+	margin: 0 0 24px 24px;
+	padding: 24px;
+	background: #f3f6f6;
+	border: solid 1px #e1e4e5;
+}
+
+.rst-content dl:not(.docutils) dl dt {
+	margin-bottom: 6px;
+	border: none;
+	border-left: none;
+	background: none;
+	color: #404040;
+}
