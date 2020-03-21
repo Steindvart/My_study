@@ -52,3 +52,7 @@
 	background: none;
 	color: #404040;
 }
+
+.rst-content .section ol p, .rst-content .section ul p {
+	margin-bottom: 0px;
+}

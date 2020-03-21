@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Что такое операционная система и как она работает? &mdash; документация My_Study 0.0.1</title>
+  <title>Что такое операционная система и как она работает? &mdash; документация My_Study 1.0</title>
   
 
   
@@ -173,7 +173,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>Что такое операционная система и как она работает?<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<h1><a class="toc-backref" href="#id23">Что такое операционная система и как она работает?</a><a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
 <p>Основа конспекта, лекция - <a class="reference external" href="https://www.youtube.com/watch?v=hb9CTGSJm88&amp;list=PLlb7e2G7aSpRgsZVTYYbpqiFrIcIpf8kp">Что такое операционная система и как она работает</a>
@@ -181,13 +181,43 @@
 </div>
 <p>Цель конспекта — последовательно рассмотреть и объяснить принципы устройства и функционирования операционной системы, её основных компонентов и абстракций.</p>
 <hr class="docutils" />
-<div class="section" id="id3">
-<h2>Введение<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="contents topic" id="id3">
+<p class="topic-title"><strong>Содержание</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id23">Что такое операционная система и как она работает?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id4" id="id24">Введение</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id6" id="id25">Немного истории</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id7" id="id26">Зачем нужна Операционная Система?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id8" id="id27">Фунции ОС</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id28">Основные абстракции ОС</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id10" id="id29">Положение ОС в уровневой иерархии организации компьютера</a></p></li>
+<li><p><a class="reference internal" href="#id11" id="id30">Что делает ядро ОС?</a></p></li>
+<li><p><a class="reference internal" href="#id12" id="id31">Как приложения взаимодействуют с ОС?</a></p></li>
+<li><p><a class="reference internal" href="#hardware" id="id32">Как оборудование (hardware) взаимодействует с ОС?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id13" id="id33">Что это значит?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id14" id="id34">Сервисы ОС</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id24">Введение</a><a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Операционные системы окружают нас повсюду – это основное программное обеспечение персональных компьютеров, серверов, мобильных устройств, сетевых устройств (роутеры, коммутаторы) и даже современных автомобилей (борт-компьютер), телевизоров и прочего. Перечислять можно очень долго, ведь они требуются практически в каждой компьютерной системе.</p>
 <p>Любой компьютер представляет собой <strong>связанную совокупность: процессора, памяти и устройств ввода-вывода</strong>.</p>
-<div class="figure align-center" id="id15">
+<div class="figure align-center" id="id16">
 <a class="reference internal image-reference" href="_images/basic_architecture.png"><img alt="Рис. 1. Общее представление архитектуры компьютера" src="_images/basic_architecture.png" style="width: 490.5px; height: 333.0px;" /></a>
-<p class="caption"><span class="caption-text">Рис. 1. Общее представление архитектуры компьютера</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Рис. 1. Общее представление архитектуры компьютера</span><a class="headerlink" href="#id16" title="Постоянная ссылка на рисунок">¶</a></p>
 <div class="legend">
 <p><a class="reference external" href="_static/OS/Motherboard_diagram_ru.jpg">Более подробная структура архитектуры ПК</a></p>
 </div>
@@ -204,8 +234,8 @@
 <p>Получается, что непосредственное <strong>создание и управление</strong> сложными процессами (приложениями) на аппаратуре становится крайне неэффективным и неудобным. То есть, например, создать и запустить на исполнение программу-браузер исключительно с помощью данных инструкций становится крайне сложной задачей. Особенно при условии, что помимо этого процесса (браузера) существуют и другие процессы, которые также пользуются ресурсами вычислительной машины.</p>
 <p>Возникает вопрос — <em>Как заставить всё это слаженно и эффективно работать, сделав пользование компьютером удобным как для обычного человека, так и для прикладного программиста?</em></p>
 <p>Чтобы ответить на этот вопрос более полседовательно, немного заглянем туда, откуда всё начиналось.</p>
-<div class="section" id="id5">
-<h3>Немного истории<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id25">Немного истории</a><a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
 <p>На заре компьютерной эпохи, первые компьютеры представляли собой огромные блоки (занимавшие большие комнаты), в которых размещались основные его компоненты: <strong>процессор, память и устройства ввода-вывода</strong>.
 И всего можно было выделить <em>два состояния</em>, в котором, в реальном времени находится компьютерная система:</p>
 <blockquote>
@@ -227,11 +257,11 @@
 </div>
 </div>
 </div>
-<div class="section" id="id6">
-<h2>Зачем нужна Операционная Система?<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Чтобы управлять доступом пользователей (процессов) к ресурсам компьютера и осуществлять другие системные функции, и были разработаны операционные системы.</p>
 <div class="section" id="id7">
-<h3>Фунции ОС:<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h3>
+<h2><a class="toc-backref" href="#id26">Зачем нужна Операционная Система?</a><a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Чтобы управлять доступом пользователей (процессов) к ресурсам компьютера и осуществлять другие системные функции, и были разработаны операционные системы.</p>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id27">Фунции ОС</a><a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>Совместное использование вычислительных ресурсов группой приложений — центральная функция ОС, которая является базой для разных системных архитектур</strong></p></li>
@@ -253,8 +283,8 @@
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="id8">
-<h3>Основные абстракции ОС:<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id9">
+<h3><a class="toc-backref" href="#id28">Основные абстракции ОС</a><a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>Процессы и потоки - то, что находится в оперативной памяти и обрабатывается процессором</p></li>
@@ -265,21 +295,21 @@
 </div></blockquote>
 </div>
 </div>
-<div class="section" id="id9">
-<h2>Положение ОС в уровневой иерархии организации компьютера<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id29">Положение ОС в уровневой иерархии организации компьютера</a><a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Современный компьютер можно представить в виде иерархии уровней (от двух и более), где на каждом уровне выделяются свои абстракции и набор возможных функций.</p>
-<div class="figure align-center" id="id16">
+<div class="figure align-center" id="id17">
 <a class="reference internal image-reference" href="_images/GeneralizedLayeredComputerStructure_OS.png"><img alt="Рис. 2. Основные уровни устройства ПК" src="_images/GeneralizedLayeredComputerStructure_OS.png" style="width: 512.0px; height: 382.5px;" /></a>
-<p class="caption"><span class="caption-text">Рис. 2. Основные уровни устройства ПК</span><a class="headerlink" href="#id16" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Рис. 2. Основные уровни устройства ПК</span><a class="headerlink" href="#id17" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>Операционная система является одним из таких уровней и представляет собой <strong>интерфейс</strong> («прослойку») между пользователем ресурсов компьютера и самими ресурсами, управляющий взаимодействиями как <em>пользователь-ресурс</em>, так и <em>пользователь-пользователь</em>, <em>устройство-устройство</em>.</p>
 <p>В целом, <em>общей схемой</em> это можно отобразить так:</p>
-<div class="figure align-left" id="id17">
+<div class="figure align-center" id="id18">
 <a class="reference internal image-reference" href="_images/OS_monolit-OS_1.png"><img alt="Рис. 3. Место ОС в компьютерной системе" src="_images/OS_monolit-OS_1.png" style="width: 433.29999999999995px; height: 417.9px;" /></a>
-<p class="caption"><span class="caption-text">Рис. 3. Место ОС в компьютерной системе</span><a class="headerlink" href="#id17" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Рис. 3. Место ОС в компьютерной системе</span><a class="headerlink" href="#id18" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
-<div class="sidebar">
-<p class="sidebar-title">Глоссарий</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
 <ul class="simple">
 <li><p>App - пользователь ресурсов;</p></li>
 <li><p>Proc - Процессор;</p></li>
@@ -290,9 +320,9 @@
 <p><strong>Kernel space</strong> — адресное пространство ядра ОС, в котором процессы имеют привилегированный доступ к ресурсам компьютера и другим процессам.</p>
 <p><strong>User space</strong> — адресное пространство, отведённое для пользовательских процессов (приложений), то есть не имеющих привилегированный доступ к ресурсам.</p>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
-<div class="section" id="id10">
-<h2>Что делает ядро ОС?<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id30">Что делает ядро ОС?</a><a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h2>
 <p><strong>Ядро ОС</strong> – центральная часть операционной системы.</p>
 <div class="admonition attention">
 <p class="admonition-title">Внимание</p>
@@ -331,13 +361,13 @@
 <p class="admonition-title">Примечание</p>
 <p>Процессорное время измеряется в тиках или секундах. Часто бывает полезно измерение процессорного времени в <em>процентах</em> от мощности процессора, которое называется <strong>загрузкой процессора</strong>.</p>
 </div>
-<div class="figure align-center" id="id18">
+<div class="figure align-center" id="id19">
 <a class="reference internal image-reference" href="_images/Top_program.jpg"><img alt="Вывод программы top" src="_images/Top_program.jpg" style="width: 445.2px; height: 286.29999999999995px;" /></a>
-<p class="caption"><span class="caption-text">Вывод программы top. Процессорное время каждого процесса (task) указано в колонке «TIME+», «CPU%» - загружаемость процессора относительно его «мощности».</span><a class="headerlink" href="#id18" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Вывод программы top. Процессорное время каждого процесса (task) указано в колонке «TIME+», «CPU%» - загружаемость процессора относительно его «мощности».</span><a class="headerlink" href="#id19" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
-<div class="section" id="id11">
-<h2>Как приложения взаимодействуют с ОС?<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id31">Как приложения взаимодействуют с ОС?</a><a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Взаимодействие процессов с ОС осуществляется с помощью <strong>системных вызовов</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
@@ -347,31 +377,31 @@
 <p>Например, чтобы выполнить обычное действие, с точки зрения прикладного программиста, – вывод строки в консоль, необходимо загрузить исполнимый код в оперативную память и передать его процессору. С помощью <em>системных вызовов</em>, <strong>запускающий</strong> процесс (уже запущенный процесс, из которого вызывается новый процесс — одни процессы порождают другие) обращается к соответствующим сервисам ОС и передаёт им управление.</p>
 <p>То есть с помощью <strong>системных вызовов</strong> выполняются те рутинные действия, которые раньше осуществлялись вручную, — загрузка кода программы в память, передача его на исполнение процессору и прочее.</p>
 <p><em>Схема организации ОС расширяется добавлением интерфейса для взаимодействия приложений с ядром ОС — механизмом системных вызовов:</em></p>
-<div class="figure align-center" id="id19">
+<div class="figure align-center" id="id20">
 <a class="reference internal image-reference" href="_images/OS_monolit-OS_2.png"><img alt="Рис 4. Интерфейс системных вызовов" src="_images/OS_monolit-OS_2.png" style="width: 433.29999999999995px; height: 466.9px;" /></a>
-<p class="caption"><span class="caption-text">Рис 4. Интерфейс системных вызовов</span><a class="headerlink" href="#id19" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Рис 4. Интерфейс системных вызовов</span><a class="headerlink" href="#id20" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
 <div class="section" id="hardware">
-<h2>Как оборудование (hardware) взаимодействует с ОС?<a class="headerlink" href="#hardware" title="Ссылка на этот заголовок">¶</a></h2>
+<h2><a class="toc-backref" href="#id32">Как оборудование (hardware) взаимодействует с ОС?</a><a class="headerlink" href="#hardware" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Одна из функций ОС — <strong>абстрагирование оборудования</strong>.</p>
-<div class="section" id="id12">
-<h3>Что это значит?<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="section" id="id13">
+<h3><a class="toc-backref" href="#id33">Что это значит?</a><a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h3>
 <p>У каждого оборудования есть свой фиксированный интерфейс. Например, операции с флешкой, жестким диском и сетевой платой будут похожи по своему типу - «записать/считать данные». Но у каждого устройства для этого, тем не менее, будет свой особенный и отличный от других интерфейс. То есть эти <strong>однотипные</strong> действия нужно будет выполнять для разных устройств по разному.</p>
 <p>ОС должка выполнять одни и те же операции над разными типами устройств. И чтобы она выполняла их однообразно — нужно чтобы был <strong>общий интерфейс</strong>. Реализацией этого общего интерфейса занимаются специальные программы - <strong>драйверы устройств</strong>. То есть, ОС обращается к драйверам устройств используя однотипные команды «отправить команду/считать/записать», а драйвера уже превращает эти команды в то, что понимает конкретное устройство.</p>
 <p><em>Схема организации ОС расширяется добавлением интерфейса взаимодействия ОС и оборудования - специальные программы «драйвера»:</em></p>
-<div class="figure align-center" id="id20">
-<a class="reference internal image-reference" href="_images/OS_monolit-OS_3.png"><img alt="Рис 5. Интерфейс драйверов" src="_images/OS_monolit-OS_3.png" style="width: 434.0px; height: 512.4px;" /></a>
-<p class="caption"><span class="caption-text">Рис 5. Интерфейс драйверов</span><a class="headerlink" href="#id20" title="Постоянная ссылка на рисунок">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="id13">
-<h2>Сервисы ОС<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Функции ОС заключены в её сервисах (модулях). Реализация организации которых зависит от архитектуры ядра. Рассмотрим на примере <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%BD%D0%BE%D0%B5_%D1%8F%D0%B4%D1%80%D0%BE">монолитного ядра</a>:</p>
 <div class="figure align-center" id="id21">
+<a class="reference internal image-reference" href="_images/OS_monolit-OS_3.png"><img alt="Рис 5. Интерфейс драйверов" src="_images/OS_monolit-OS_3.png" style="width: 434.0px; height: 512.4px;" /></a>
+<p class="caption"><span class="caption-text">Рис 5. Интерфейс драйверов</span><a class="headerlink" href="#id21" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id34">Сервисы ОС</a><a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функции ОС заключены в её сервисах (модулях). Реализация организации которых зависит от архитектуры ядра. Рассмотрим на примере <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%BD%D0%BE%D0%B5_%D1%8F%D0%B4%D1%80%D0%BE">монолитного ядра</a>:</p>
+<div class="figure align-center" id="id22">
 <a class="reference internal image-reference" href="_images/OS_monolit-All.png"><img alt="Рис 6. Основные компоненты ОС" src="_images/OS_monolit-All.png" style="width: 433.29999999999995px; height: 511.7px;" /></a>
-<p class="caption"><span class="caption-text">Рис 6. Основные компоненты ОС</span><a class="headerlink" href="#id21" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Рис 6. Основные компоненты ОС</span><a class="headerlink" href="#id22" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <ul class="simple">
 <li><dl class="simple">
