@@ -15,7 +15,7 @@
 ------------------------------------
 
 * `Операционные системы <https://my-study-st.readthedocs.io/ru/latest/os_main.html>`_
-* `Математика <https://my-study-st.readthedocs.io/ru/latest/math.html>`_
+* `Математика <https://my-study-st.readthedocs.io/ru/latest/math_main.html>`_
 
 
 Какой во всём этом смысл?

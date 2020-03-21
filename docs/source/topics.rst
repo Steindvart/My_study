@@ -10,4 +10,4 @@
     :name: toc_topics
 
     os_main
-    math
+    math_main
