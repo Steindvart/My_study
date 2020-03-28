@@ -281,7 +281,7 @@
 Изнутри, загруженная в память программа может быть условно разделена на четыре части: Stack, Heap (кучу), Text (код) и данные (Data).
 
 .. figure:: _static/OS/Process/Proc_Struct_txt.png
-    :scale: 100 %
+    :scale: 30 %
     :align: center
     :alt: Рис 6. Сегменты памяти процесса
 
