@@ -11,3 +11,4 @@
 
     os_main
     math_main
+    web/web_main
