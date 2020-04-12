@@ -3,7 +3,7 @@
 ==============================
 
 .. figure:: _static/OS/os_prew.png
-    :scale: 100 %
+    :width: 650 px
     :align: center
     :alt: OS preview
 
