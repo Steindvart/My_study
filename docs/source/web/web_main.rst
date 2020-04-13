@@ -19,4 +19,4 @@ Web-технологии
     :maxdepth: 1
     :titlesonly:
 
-    Web-технологии. Mail.ru Group <Courses/web_technology/web_technology_mailru_G>
+    Web-технологии. Mail.ru Group <courses/web_technology/0_web_technology_mailru_G>

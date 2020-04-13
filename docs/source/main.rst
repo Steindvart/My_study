@@ -14,8 +14,9 @@
 Содержание
 ------------------------------------
 
-* `Операционные системы <https://my-study-st.readthedocs.io/ru/latest/os_main.html>`_
-* `Математика <https://my-study-st.readthedocs.io/ru/latest/math_main.html>`_
+* `Операционные системы <OS/os_main.html>`_
+* `Математика <Math/math_main.html>`_
+* `Web-технологии <Web/web_main.html>`_
 
 
 Какой во всём этом смысл?

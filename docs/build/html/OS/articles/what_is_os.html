@@ -1,0 +1,939 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Что такое операционная система и как она работает? &mdash; документация My_Study 1.0</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/main.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Математика" href="../../Math/math_main.html" />
+    <link rel="prev" title="Операционные системы" href="../os_main.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #778899" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/My_Study_logo-bold.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../main.html">Главная</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#id2">Что это?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#id4">Содержание</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#id7">Какой во всём этом смысл?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../main.html#id8">Как этим пользоваться?</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../topics.html">Разделы</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../os_main.html">Операционные системы</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../os_main.html#id2">Конспекты</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Что такое операционная система и как она работает?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Math/math_main.html">Математика</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Math/math_main.html#id2">Конспекты</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Web/web_main.html">Web-технологии</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Web/web_main.html#id1">Конспекты</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Web/web_main.html#id2">Курсы</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Web/courses/web_technology/0_web_technology_mailru_G.html">Web-технологии. Mail.ru Group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">My_Study</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../topics.html">Разделы</a> &raquo;</li>
+        
+          <li><a href="../os_main.html">Операционные системы</a> &raquo;</li>
+        
+      <li>Что такое операционная система и как она работает?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/OS/articles/what_is_os.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1><a class="toc-backref" href="#id56">Что такое операционная система и как она работает?</a><a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Основа конспекта, лекция - <a class="reference external" href="https://www.youtube.com/watch?v=hb9CTGSJm88&amp;list=PLlb7e2G7aSpRgsZVTYYbpqiFrIcIpf8kp">Что такое операционная система и как она работает</a>
+Автор конспекта/статьи немного переработал и дополнил некоторые моменты: структуру и повествование, постарался дать более глубокое и последовательное разъясление, добавил как скаченные, так и созданные им лично схемы.</p>
+</div>
+<p>Цель конспекта — последовательно рассмотреть и объяснить принципы устройства и функционирования операционной системы, её основных компонентов и абстракций.</p>
+<hr class="docutils" />
+<div class="contents topic" id="id3">
+<p class="topic-title">Содержание</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id56">Что такое операционная система и как она работает?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id4" id="id57">Введение</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id6" id="id58">Немного истории</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id7" id="id59">Зачем нужна Операционная Система?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id8" id="id60">Фунции ОС</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id61">Основные абстракции ОС</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id10" id="id62">Положение ОС в многоуровневой иерархии организации компьютера</a></p></li>
+<li><p><a class="reference internal" href="#id11" id="id63">Как операционная система загружается в компьютер?</a></p></li>
+<li><p><a class="reference internal" href="#id12" id="id64">Что делает ядро ОС?</a></p></li>
+<li><p><a class="reference internal" href="#id13" id="id65">Прерывания</a></p></li>
+<li><p><a class="reference internal" href="#id14" id="id66">Как приложения взаимодействуют с ОС?</a></p></li>
+<li><p><a class="reference internal" href="#id15" id="id67">Как оборудование взаимодействует с ОС?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id16" id="id68">Что это значит?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id17" id="id69">Сервисы ОС</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id19" id="id70">Основные</a></p></li>
+<li><p><a class="reference internal" href="#id21" id="id71">Дополнительные</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id22" id="id72">Основные абстракции</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id23" id="id73">Процесс</a></p></li>
+<li><p><a class="reference internal" href="#id27" id="id74">Поток</a></p></li>
+<li><p><a class="reference internal" href="#id29" id="id75">Файл</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id30" id="id76">Реализация многозадачности</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id31" id="id77">Переключение контекста</a></p></li>
+<li><p><a class="reference internal" href="#id33" id="id78">Критические секции и блокировки</a></p></li>
+<li><p><a class="reference internal" href="#deadlock" id="id79">Deadlock - взаимная блокировка</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id35" id="id80">Адреса и управление памятью</a></p></li>
+<li><p><a class="reference internal" href="#id36" id="id81">Итог</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id37" id="id82">Основные механизмы (сервисы)</a></p></li>
+<li><p><a class="reference internal" href="#id38" id="id83">Абстракции</a></p></li>
+<li><p><a class="reference internal" href="#id39" id="id84">Заключение</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id57">Введение</a><a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Операционные системы окружают нас повсюду – это основное программное обеспечение персональных компьютеров, серверов, мобильных устройств, сетевых устройств (роутеры, коммутаторы) и даже современных автомобилей (борт-компьютер), телевизоров и прочего. Перечислять можно очень долго, ведь они требуются практически в каждой компьютерной системе.</p>
+<p>Любой компьютер представляет собой <strong>связанную совокупность: процессора, памяти и устройств ввода-вывода</strong>.</p>
+<div class="figure align-center" id="id41">
+<a class="reference internal image-reference" href="../../_images/basic_architecture.png"><img alt="Рис. 1. Общее представление архитектуры компьютера" src="../../_images/basic_architecture.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Рис. 1. Общее представление архитектуры компьютера</span><a class="headerlink" href="#id41" title="Постоянная ссылка на рисунок">¶</a></p>
+<div class="legend">
+<p><a class="reference external" href="../img/Motherboard_diagram_ru.jpg">Более подробная структура архитектуры ПК</a></p>
+</div>
+</div>
+<p>Сама по себе, аппаратура умеет делать только очень простые, базовые операции - по типу: <em>сложить два числа, перейти к адресу, записать по адресу и тд.</em></p>
+<p>Например, <strong>процессор</strong> умеет выполнять только четыре базовых типа инструкции:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Чтение инструкций/данных из памяти (read)</p></li>
+<li><p>Выполнение интрукции (execute)</p></li>
+<li><p>Запись результата в память (write)</p></li>
+<li><p>Прерывание (interrupt)</p></li>
+</ul>
+</div></blockquote>
+<p>Получается, что непосредственное <strong>создание и управление</strong> сложными процессами (приложениями) на аппаратуре становится крайне неэффективным и неудобным. То есть, например, создать и запустить на исполнение программу-браузер исключительно с помощью данных инструкций становится крайне сложной задачей. Особенно при условии, что помимо этого процесса (браузера) существуют и другие процессы, которые также пользуются ресурсами вычислительной машины.</p>
+<p>Возникает вопрос — <em>Как заставить всё это слаженно и эффективно работать, сделав пользование компьютером удобным как для обычного человека, так и для прикладного программиста?</em></p>
+<p>Чтобы ответить на этот вопрос более последовательно, немного заглянем туда, откуда всё начиналось.</p>
+<div class="section" id="id6">
+<h3><a class="toc-backref" href="#id58">Немного истории</a><a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>На заре компьютерной эпохи, первые компьютеры представляли собой огромные блоки (занимавшие большие комнаты), в которых размещались основные его компоненты: <strong>процессор, память и устройства ввода-вывода</strong>.
+И всего можно было выделить <em>два состояния</em>, в котором, в реальном времени находится компьютерная система:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ввод/Вывод</p></li>
+<li><p>Вычисление</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Важная идея!
+Так как вычисления производятся быстрее, чем непосредственный ввод-вывод данных, разработчикам пришла идея о том, что к ресурсам можно допускать не одного пользователя (процесс), а множество, предоставляя им способ независимо друг от друга загружать (ввод) и получать (вывод) данные через отдельные терминалы, чтобы более эффективно использовать ресурсы компьютера и вычислительные модули не простаивали в ожидании ввода/вывода.</p>
+</div>
+<p>Идея многопользовательского режима в использовании ресурсов компьютера нашла свою реализацию в понятии <strong>процесс</strong>. То есть, каждый процесс - <strong>это пользователь ресурсов компьютера</strong>.</p>
+<p>Эта идея положила начало созданию такой системы, которую мы теперь называем операционной - <strong>программной системы, которая управляет ресурсами компьютера, а следовательно осуществляет доступ к этим ресурсам и управляет процессами - пользователями этимх ресурсов.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Далее, термины: <em>процесс, приложение</em> идут как синонимы термину <strong>пользователь ресурсов</strong>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id59">Зачем нужна Операционная Система?</a><a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Операционная система - <strong>программная система, которая управляет ресурсами компьютера, а следовательно осуществляет доступ к этим ресурсам, управляет процессами, вводит и реализует различные абстракции, выполняет другие системные функции.</strong></p>
+<p>Существует три ключевых элемента операционной системы:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Абстракции (процессы, потоки, файлы, сокеты, адресное пространство).</p></li>
+<li><p>Функции (создание, управление, открытие, запись, распределение).</p></li>
+<li><dl class="simple">
+<dt>Конкретные реализации</dt><dd><ul class="simple">
+<li><p>Архитектуры: монолитные, модульные, гибридные;</p></li>
+<li><p>Алгоритмы: LRU, EDF;</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id60">Фунции ОС</a><a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><strong>Управление ресурсами и процессами, а также совместное использование вычислительных ресурсов группой приложений (многозадачность) — центральная функция ОС, которая является базой для разных системных архитектур</strong></dt><dd><ul>
+<li><p>Scheduler — планировщик. Механизм управляющий процессами и реализующий многозадачность.</p></li>
+<li><p>Memory manager — менеджер памяти. Механизм выделяющий память и управляющий ею.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Абстракция оборудования для удобства и переносимости</dt><dd><ul>
+<li><p>то есть реализация единого интерфейса для разного, но схожего по функциям оборудования.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Изоляция ошибок приложений друг от друга (и от ядра ОС)</p></li>
+<li><dl class="simple">
+<dt>Переносимость данных между приложениями (процессами)</dt><dd><ul>
+<li><p>Inter Process Communication (IPC) — Механизм межпроцессного взаимодействия</p></li>
+<li><p>файлы и файловая система</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id9">
+<h3><a class="toc-backref" href="#id61">Основные абстракции ОС</a><a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Процессы и потоки - программы, что находятся в оперативной памяти и обрабатываются процессором. Другими словами - исполнение программы.</p></li>
+<li><p>Файлы и файловые системы - некоторая структура данных и связи между этими структурами, универсальный системный интерфейс.</p></li>
+<li><p>Адресное пространство и память - распределение и управление памятью.</p></li>
+<li><p>Сокеты, протоколы, устройства - интерфейсы взаимодействия.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id10">
+<h2><a class="toc-backref" href="#id62">Положение ОС в многоуровневой иерархии организации компьютера</a><a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Современный компьютер можно представить в виде иерархии уровней (от двух и более), где на каждом уровне выделяются свои абстракции и набор возможных функций.</p>
+<div class="figure align-center" id="id42">
+<a class="reference internal image-reference" href="../../_images/GeneralizedLayeredComputerStructure_OS.png"><img alt="Рис. 2. Основные уровни устройства ПК" src="../../_images/GeneralizedLayeredComputerStructure_OS.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Рис. 2. Основные уровни устройства ПК</span><a class="headerlink" href="#id42" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Операционная система является одним из таких уровней и представляет собой <strong>интерфейс</strong> («прослойку») между пользователем ресурсов компьютера и самими ресурсами, управляющий взаимодействиями как между <em>пользователь-ресурс</em>, так и <em>пользователь-пользователь</em>, <em>устройство-устройство</em>.</p>
+<p>В целом, <em>общей схемой</em> это можно отобразить так:</p>
+<div class="figure align-center" id="id43">
+<a class="reference internal image-reference" href="../../_images/OS_monolit-OS_1.png"><img alt="Рис. 3. Место ОС в компьютерной системе" src="../../_images/OS_monolit-OS_1.png" style="width: 440px;" /></a>
+<p class="caption"><span class="caption-text">Рис. 3. Место ОС в компьютерной системе</span><a class="headerlink" href="#id43" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<ul class="simple">
+<li><p>App - пользователь ресурсов;</p></li>
+<li><p>Hardware - оборудование;</p></li>
+<li><p>Proc - Процессор;</p></li>
+<li><p>Memory - Оперативная память;</p></li>
+<li><p>I/O - Устройства ввода/вывода;</p></li>
+</ul>
+<p><strong>Интерфейс</strong> — набор правил и средств взаимодействия двух систем. Иными словами способ взаимодействия.</p>
+<p><strong>Kernel space</strong> — адресное пространство ядра ОС, в котором процессы имеют привилегированный доступ к ресурсам компьютера и другим процессам.</p>
+<p><strong>User space</strong> — адресное пространство, отведённое для пользовательских процессов (приложений), то есть не имеющих привилегированный доступ к ресурсам.</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id63">Как операционная система загружается в компьютер?</a><a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Процесс загрузки операционной системы и вообще компьютера имеет несколько этапов, основные из которых:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Запуск компьютера – на процессор подаётся напряжение и его элекрические компоненты начинают работу.</p></li>
+<li><p>Процессор начинает исполнять инструкции с <strong>фиксированного, аппаратно зашитого в него адреса.</strong></p></li>
+<li><p>По этому адресу находится специальная программа <a class="reference external" href="https://ru.wikipedia.org/wiki/POST_(%D0%B0%D0%BF%D0%BF%D0%B0%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5)">POST</a> – <strong>Power On Self Test</strong>. Которая проверяет работоспособность основных компонентов вычислительной системы.</p></li>
+<li><p>Далее, управление передаётся BIOS’y — Basic Input Output System (Базовая система ввода-вывода), которая инициализирует основные устройства ввода-вывода: загрузочные устройства (раличные хранители информации: HDD, SSD, Flash и так далее), клавиатура, монитор и прочее.</p></li>
+<li><p><a class="reference external" href="https://ru.wikipedia.org/wiki/BIOS">BIOS</a> обращается к загрузочному устройству и читает первый блок данных, на котором <strong>должен находиться загрузчик</strong>. Загружает его в память и передаёт ему управление.</p></li>
+<li><p>Загрузчик загружает в память и инициализирует основные компоненты операционной системы и передаёт ей управление.</p></li>
+<li><p>Операционная система запускает таймер, который будет возвращать управление операционной системе каждый, заранее установленный разработчиками ОС, <strong>квант</strong> времени. Это делается для реализация Scheduler’a - планировщика, чтобы ОС могла управлять и контролировать процессы.</p></li>
+<li><p>Операционная система создаёт первый <strong>процесс-пользователя</strong> и дальше от него начинают множится другие процессы.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="id12">
+<h2><a class="toc-backref" href="#id64">Что делает ядро ОС?</a><a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h2>
+<p><strong>Ядро ОС</strong> – центральная часть операционной системы. По сути, это и есть ОС.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Это реакционный механизм, то есть его работа заключается исключительно в реакции на какие-либо события для их последующей обработки.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Обрабывает запросы приложений</dt><dd><ul>
+<li><p>системные вызовы (программные прерывания)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Обрабывает запросы оборудования</dt><dd><ul>
+<li><p>прерывания</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Обрабатывает исключительные ситуации</dt><dd><ul>
+<li><p>Разного рода ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Обеспечивает диспетчеризацию процессов (scheduling)</dt><dd><ul>
+<li><dl class="simple">
+<dt>реализация многопользовательского режима доступа к ресурсам</dt><dd><ul>
+<li><p>время работы процессора делится на фрагменты и они распределяются по процессам</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Процессорное время измеряется в тиках или секундах. Часто бывает полезно измерение процессорного времени в <em>процентах</em> от мощности процессора, которое называется <strong>загрузкой процессора</strong>.</p>
+</div>
+<div class="figure align-center" id="id44">
+<a class="reference internal image-reference" href="../../_images/Top_program.jpg"><img alt="Вывод программы top" src="../../_images/Top_program.jpg" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Вывод программы top. Процессорное время каждого процесса (task) указано в колонке «TIME+», «CPU%» - загружаемость процессора относительно его «мощности».</span><a class="headerlink" href="#id44" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id65">Прерывания</a><a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Эта часть больше относится непосредственно к аппаратной части, но этот механизм стоит освятить, так как именно это основной аппаратный механизм реализации ОС.</p>
+</div>
+<p><strong>Прерывание</strong> – сигнал остановки последовательного выполнения программы, для обработки запроса или реакции на событие.</p>
+<p>Чтобы получить код обработки прерывания, в памяти расположена специальная <strong>таблица обработчиков прерываний</strong>, в которой для каждого типа прерывания содержится указатель на тот участок памяти, где расположен соответствующий код обработки данного прерывания.</p>
+<p>Инициализация данной таблицы первично осуществялется BIOS’ом в соответствии с архитектурой процессора. После, её инициализирует операционная система для дополнения этой таблицы какими-либо своими прерываниями.</p>
+<dl class="simple">
+<dt>Виды и примеры прерываний:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Аппаратные прерывания – с помощью специального контроллера прерываний.</dt><dd><ul>
+<li><p>Нажатие на кнопку</p></li>
+<li><p>Заполнение памяти сетевой карты</p></li>
+<li><p>И тд.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Программные прерывания (системные вызовы) – вызывается самой программой для вызова того или иного прерывания.</dt><dd><ul>
+<li><p>Открытие/закрытие файла</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Прерывания таймера – для реализации планировщика ОС</p></li>
+<li><dl class="simple">
+<dt>Исключение</dt><dd><ul>
+<li><p>Разного рода ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id66">Как приложения взаимодействуют с ОС?</a><a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Взаимодействие процессов с ОС осуществляется с помощью <strong>системных вызовов</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p><strong>Механизм системных вызовов</strong> — это интерфейс, который предоставляет ядро ОС (kernel space) пользовательским процессам (user space).</p>
+<p><strong>Системный вызов</strong> – программное прерывание, обращение пользовательского процесса к ядру операционной системы для выполнения какой-либо операции.</p>
+</div>
+<p>Например, чтобы выполнить обычное действие, с точки зрения прикладного программиста, – вывод строки в консоль, необходимо загрузить исполнимый код в оперативную память и передать его процессору. С помощью <em>системных вызовов</em>, <strong>запускающий</strong> процесс (уже запущенный процесс, из которого вызывается новый процесс — одни процессы порождают другие) обращается к соответствующим сервисам ОС и передаёт им управление для выполнения этих функций.</p>
+<p>То есть с помощью <strong>системных вызовов</strong> выполняются те рутинные действия, которые раньше осуществлялись вручную, — загрузка кода программы в память, передача его на исполнение процессору и прочее.</p>
+<p><em>Схема организации ОС расширяется добавлением интерфейса для взаимодействия приложений с ядром ОС — механизмом системных вызовов:</em></p>
+<div class="figure align-center" id="id45">
+<a class="reference internal image-reference" href="../../_images/OS_monolit-OS_2.png"><img alt="Рис 4. Интерфейс системных вызовов" src="../../_images/OS_monolit-OS_2.png" style="width: 440px;" /></a>
+<p class="caption"><span class="caption-text">Рис 4. Интерфейс системных вызовов</span><a class="headerlink" href="#id45" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id15">
+<h2><a class="toc-backref" href="#id67">Как оборудование взаимодействует с ОС?</a><a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Оборудование взаимодействует с ОС с помощью <strong>аппаратных прерываний</strong>. И одна из функций ОС — <strong>абстрагирование оборудования</strong>.</p>
+<div class="section" id="id16">
+<h3><a class="toc-backref" href="#id68">Что это значит?</a><a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h3>
+<p>У каждого оборудования есть свой фиксированный интерфейс. Например, операции с флешкой, жестким диском, сетевой платой и многими другими будут похожи по своему типу - «записать/считать данные». Но у каждого устройства для этого, тем не менее, будет свой особенный и отличный от других интерфейс. То есть эти <strong>однотипные</strong> действия нужно будет выполнять для разных устройств по разному.</p>
+<p>ОС должка выполнять одни и те же операции над разными типами устройств. И чтобы она выполняла их однообразно — нужно чтобы был <strong>общий интерфейс</strong>. Реализацией этого общего интерфейса занимаются специальные программы - <strong>драйверы устройств</strong>. То есть, ОС обращается к драйверам устройств используя однотипные команды «отправить команду/считать/записать», а драйвера уже превращает эти команды в то, что понимает конкретное устройство.</p>
+<p><em>Схема организации ОС расширяется добавлением интерфейса взаимодействия ОС и оборудования - специальные программы «драйвера»:</em></p>
+<div class="figure align-center" id="id46">
+<a class="reference internal image-reference" href="../../_images/OS_monolit-OS_3.png"><img alt="Рис 5. Интерфейс драйверов" src="../../_images/OS_monolit-OS_3.png" style="width: 440px;" /></a>
+<p class="caption"><span class="caption-text">Рис 5. Интерфейс драйверов</span><a class="headerlink" href="#id46" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2><a class="toc-backref" href="#id69">Сервисы ОС</a><a class="headerlink" href="#id17" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функции ОС заключены в её сервисах (модулях). Реализация организации которых зависит от архитектуры ядра. Рассмотрим на примере <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%BE%D0%BB%D0%B8%D1%82%D0%BD%D0%BE%D0%B5_%D1%8F%D0%B4%D1%80%D0%BE">монолитного ядра</a>:</p>
+<div class="figure align-center" id="id47">
+<a class="reference internal image-reference" href="../../_images/OS_monolit-All.png"><img alt="Рис 6. Основные компоненты ОС" src="../../_images/OS_monolit-All.png" style="width: 440px;" /></a>
+<p class="caption"><span class="caption-text">Рис 6. Основные компоненты ОС</span><a class="headerlink" href="#id47" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="section" id="id19">
+<h3><a class="toc-backref" href="#id70">Основные</a><a class="headerlink" href="#id19" title="Ссылка на этот заголовок">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Управление процессами (Process scheduler - планировщик)</dt><dd><ul>
+<li><p>Запуск (помещение на процессор, выделение процессорного времени)</p></li>
+<li><p>Приостановка (заморозка)</p></li>
+<li><p>Завершение</p></li>
+<li><p>Изменение приоритета</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Как говорилось <a class="reference external" href="what_is_os.html#id11">в части о загрузке ОС</a>, реализация планировщика осуществляется с помощью <strong>прерывания по таймеру</strong> — каждый <strong>квант времени</strong> происходит прерывание, которое передаёт управление ОС и она анализирует состояние всех процессов и что с каким процессом сделать: запустить, приостановить, завершить или изменить приоритет.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Межпроцессное взаимодействие (IPC - Inter Process Communication)</dt><dd><ul>
+<li><p>Общая память для нескольких процессов (shared memory)</p></li>
+<li><p>Способы обмена данными через те или иные механизмы (file, pipe, signals)</p></li>
+<li><p>Сетевое взаимодействие</p></li>
+<li><p>Механизмы предотвращения коллизий и синхронизации (семафоры, мьютексы)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Управление памятью (Memory manager)</dt><dd><ul>
+<li><p>Динамическое выделение памяти (Memory allocation)</p></li>
+<li><p>Создание иллюзии уникальности адресного пространства для каждого процесса</p></li>
+<li><p>Механизм виртуальной памяти</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h3><a class="toc-backref" href="#id71">Дополнительные</a><a class="headerlink" href="#id21" title="Ссылка на этот заголовок">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Файловая система (File system)</dt><dd><ul>
+<li><p>Файлы и их содержимое</p></li>
+<li><p>Каталоги и директории</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Доступ к оборудованию и управление им</dt><dd><ul>
+<li><p>Прерывания</p></li>
+<li><p>Драйвера</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Модель безопасности</dt><dd><ul>
+<li><p>Пользователи («юзеры») и их группы</p></li>
+<li><p>Права доступа</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Разное</dt><dd><ul>
+<li><p>Интерфейс ввода-вывода (I/O Interface)</p></li>
+<li><p>Сетевой интерфейс (Network Interface)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id22">
+<h2><a class="toc-backref" href="#id72">Основные абстракции</a><a class="headerlink" href="#id22" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id23">
+<h3><a class="toc-backref" href="#id73">Процесс</a><a class="headerlink" href="#id23" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>Процесс</strong> — совокупность инструкций и данных, что находятся в оперативной памяти и обрабатываются процессором. Другими словами - исполнение программы в целом (не путать с <em>потоком исполнения</em>).</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Компьютерная программа сама по себе — лишь пассивная последовательность инструкций. В то время как процесс — непосредственное выполнение этих инструкций.</p>
+</div>
+<p>В рамках ОС, это абстракция, которая предоставляет иллюзию <em>персональной машины</em>. То есть то, что данный исполнимый код полностью владеет всеми вычислительными ресурсами машины.</p>
+<div class="section" id="id24">
+<h4>Состояние (контекст) процесса<a class="headerlink" href="#id24" title="Ссылка на этот заголовок">¶</a></h4>
+<dl class="simple">
+<dt><em>С внешней стороны</em>, процесс можно описать следующим:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Состояние</dt><dd><ul>
+<li><p>Состояние памяти</p></li>
+<li><p>Содержимое регистров процессора</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Адрестное пространство — у каждого процесса своё.</p></li>
+<li><p>Состояние исполнения — то, исполняется ли этот процесс на процессоре в данный момент или ожидает чего-либо.</p></li>
+<li><p>CPU - величина использовния процессорного времени.</p></li>
+</ul>
+</dd>
+</dl>
+<p><em>Изнутри</em>, процесс можно условно разделена на четыре части: <strong>Stack, Heap (кучу), Text (код) и данные (Data)</strong>.</p>
+<div class="figure align-center" id="id48">
+<a class="reference internal image-reference" href="../../_images/Proc_Struct_txt.png"><img alt="Рис 7. Сегменты памяти процесса" src="../../_images/Proc_Struct_txt.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">Рис 7. Сегменты памяти процесса</span><a class="headerlink" href="#id48" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id25">
+<h4>Состояния исполнения<a class="headerlink" href="#id25" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Когда процесс выполняется, он проходит через разные состояния. Эти этапы могут различаться в разных операционных системах.</p>
+<p>Общая картина выглядит так:</p>
+<div class="figure align-center" id="id49">
+<a class="reference internal image-reference" href="../../_images/Conditions_colored.png"><img alt="Рис 8. Состояния исполнения процесса" src="../../_images/Conditions_colored.png" style="width: 650px;" /></a>
+<p class="caption"><span class="caption-text">Рис 8. Состояния исполнения процесса</span><a class="headerlink" href="#id49" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<ul class="simple">
+<li><p>Новый: начальное состояние при создании процесса.</p></li>
+<li><p>Готов: процесс ожидает исполнения на процессоре. В течение работы процессор может переключаться между процессами, переводя одни в режим готовности, другие – в режим исполнения.</p></li>
+<li><p>Исполнение: непосредственное выполнение инструкций на процессоре.</p></li>
+<li><p>Ожидает: процесс переходит в состояние ожидания. Например, ждёт ввода данных или получения доступа к файлу.</p></li>
+<li><p>Завершен: как только процесс завершится, он перейдёт в это состояние и будет ожидать удаления.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id26">
+<h4>Информация о процессе<a class="headerlink" href="#id26" title="Ссылка на этот заголовок">¶</a></h4>
+<p>Вся информация о процессе содержится в специальной структуре данных, поддерживаемой операционной системой для каждого процесса – PCB (Process Control Block) - Блок управления процессов.</p>
+<div class="figure align-center" id="id50">
+<a class="reference internal image-reference" href="../../_images/PBC.jpeg"><img alt="Рис 9. Process Control Block" src="../../_images/PBC.jpeg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Рис 9. Process Control Block</span><a class="headerlink" href="#id50" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<ul class="simple">
+<li><p>Process ID: идентификатор каждого из процессов в ОС.</p></li>
+<li><p>State: текущее состояние процесса.</p></li>
+<li><p>Privileges: разрешения доступа к системным ресурсам.</p></li>
+<li><p>Pointer: указатель на родительский процесс.</p></li>
+<li><p>Priority: приоритет процесса и другая информация, которая требуется для планирования процесса.</p></li>
+<li><p>Program Counter: указатель на адрес следующей команды, которая должна быть выполнена.</p></li>
+<li><p>CPU registers: регистры процессора, необходимые для состояния исполнения.</p></li>
+<li><p>Accounting Information: уровень нагрузки на процессор, статистика и другие данные.</p></li>
+<li><p>I/O Information: список ресурсов, использующих чтение и запись.</p></li>
+</ul>
+</div>
+<p>Информацию о процессах в целом, ОС хранит в специальной таблице процессов.</p>
+</div>
+</div>
+<div class="section" id="id27">
+<h3><a class="toc-backref" href="#id74">Поток</a><a class="headerlink" href="#id27" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Процесс может делиться на <strong>потоки (threads)</strong>. Они обеспечивают параллелизм, то есть одновременное исполнение нескольких потоков инструкций, на уровне программы.</p>
+<p><a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D0%BE%D0%BA_%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F">Поток выполнения (нить, thread)</a> — последовательность исполнения инструкций. Ход исполнения программы**.</p>
+<p>Процесс является <strong>контейнером ресурсов</strong> (адресное пространство, процессорное время и тд), а <strong>поток – последовательность инструкций, которые исполняются внутри этого контейнера</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Реализация потоков выполнения и процессов в разных операционных системах отличается друг от друга, но в большинстве случаев поток выполнения находится внутри процесса.</p>
+</div>
+<div class="figure align-center" id="id51">
+<a class="reference internal image-reference" href="../../_images/Multithreaded_process.png"><img alt="Рис 10. Многопоточный процесс" src="../../_images/Multithreaded_process.png" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text">Рис 10. Многопоточный процесс</span><a class="headerlink" href="#id51" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Потоки, существующие в рамках одного процесса, в его адресном пространстве, могут совместно использовать ресурсы процесса, например такие как память или файл. Тогда как процессы не разделяют этих ресурсов, так как каждый существует в своём адресном пространстве.</p>
+<p>Также поток называют <strong>легковесный процесс</strong>.</p>
+<p>Сегодня потоки широко применяются в работе серверов и многопроцессорных устройств с общей памятью.</p>
+<p>Рассмотрим на примере утилиты <a class="reference external" href="https://ru.wikipedia.org/wiki/Htop">htop</a>.</p>
+<div class="figure align-center" id="id52">
+<a class="reference internal image-reference" href="../../_images/htop_out.png"><img alt="Рис 11. Вывод утилиты мониторинга процессов htop" src="../../_images/htop_out.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">Рис 11. Вывод утилиты мониторинга процессов htop</span><a class="headerlink" href="#id52" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p><strong>PID</strong> — Process ID; Уникальное число идентификатор для каждого процесса</p>
+<p><strong>TGID</strong> — Tread Group ID; Индентификатор группы потоков</p>
+</div>
+<p>На скриншоте, <em>процесс 2881</em> имеет множество потоков, отношение которых к нему можно определить по тому, что <strong>TGID у этих потоков имеет значение PIDа этого процесса - 2881</strong>. Таким образом, один процесс разбивается на множество потоков, в которых инструкции исполняются параллельно.</p>
+<div class="section" id="id28">
+<h4>Чем хороши потоки<a class="headerlink" href="#id28" title="Ссылка на этот заголовок">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Они минимизируют время переключения контекста (процессора).</p></li>
+<li><p>Их использование обеспечивает параллелизм процесса.</p></li>
+<li><p>Они эффективно общаются между собой.</p></li>
+<li><p>Потоки позволяют использовать многопроцессорные архитектуры в большем масштабе.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="id29">
+<h3><a class="toc-backref" href="#id75">Файл</a><a class="headerlink" href="#id29" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Это очень широкое и многогранное понятие. Но если выделить наиболее общее, то получится, что <strong>файл</strong> — это универсальный системный интерфейс для обращения к тем или иным данным.</p>
+<p>А <strong>файловая система</strong> — это система имён. То есть возможность выделять те или иные объекты данных и присваивать им имена, а также выделять иерархию.</p>
+<p>По другому, файл и файловую систему можно также представить как структуру данных и связи между этими структурами.</p>
+</div>
+</div>
+<div class="section" id="id30">
+<h2><a class="toc-backref" href="#id76">Реализация многозадачности</a><a class="headerlink" href="#id30" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Осуществляется при помощи следующих механизмов:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Прерывание таймера</dt><dd><ul>
+<li><p>когда при запуске, ОС программирует таймер на то, чтобы он каждый <strong>квант времени</strong> передавал управление ОС.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Переключение контекста</dt><dd><ul>
+<li><p>сохранение состояния исполнения (регистров) процесса и установка на процессор контекста другого процесса.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>План блокировок, при наличии нескольких CPU</p></li>
+<li><p>Освобождение ресурсов при завершении процесса</p></li>
+</ul>
+<div class="section" id="id31">
+<h3><a class="toc-backref" href="#id77">Переключение контекста</a><a class="headerlink" href="#id31" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>Контекст процесса</strong> — это состояние регистров, при его выполнении на процессоре.</p>
+<p>Следовательно, <strong>переключение контекста</strong> — это смена контекста одного процесса, на контекст другого, без потери данных сменяемого процесса - то есть, чтобы его потом можно было восстановить с того момента, где он был переключён.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Например, у нас на процессоре в данный момент времени выполняется «процесс 1» - в регистрах хранятся данные, которые относятся к этому процессу.</p>
+<p>Но происходит прерывание и «процесс 1» снимается с выполнения на процессоре, чтобы вместо него выполнялся «процесс 2». Следовательно, нужно заполнить регистры уже теми данными, что относятся к «процессу 2».</p>
+<p>Однако, «процесс 1» ещё не выполнился полностью, и для дальшейнего исполнения ему нужны те данные, что хранились в регистрах при прерываний, то есть необходим его контекст. Операционная система должна обеспечивать подобные смены контекстов без потери данных.</p>
+</div>
+<dl class="simple">
+<dt><strong>При переключений контекста возникает три важных вопроса:</strong></dt><dd><ol class="arabic simple">
+<li><p>Как?</p></li>
+<li><p>Когда?</p></li>
+<li><p>Между кем и кем?</p></li>
+</ol>
+</dd>
+</dl>
+<div class="section" id="id32">
+<h4>Как?<a class="headerlink" href="#id32" title="Ссылка на этот заголовок">¶</a></h4>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Значения регистров процесса записываются в Stack этого же процесса в оперативной памяти. Таким образом, процесс в своей памяти хранит свой же контекст.</p></li>
+<li><p>Контекст планировщика появляется на процессоре, выполняет анализ имеющихся процессов.</p></li>
+<li><p>Переключает процессор на контекст уже другого, нового процесса.</p></li>
+</ol>
+</div></blockquote>
+<p>В целом, смена контекста происходит между состояниями «Готов», «Ожидает» и «Исполняется».</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/Conditions_colored.png"><img alt="Состояния исполнения процесса" src="../../_images/Conditions_colored.png" style="width: 650px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h3><a class="toc-backref" href="#id78">Критические секции и блокировки</a><a class="headerlink" href="#id33" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Одна из основных проблем с которыми может столкнуться такая система с вытесняющей многозадачностью — <strong>порядок доступа процессов к их общим ресурсам</strong>.</p>
+<p>Возникают, так называемые, <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B5%D0%BA%D1%86%D0%B8%D1%8F">критические секции</a> – участки исполняемого кода программы, в которых производится доступ к общему ресурсу (данным или устройству), который не должен быть одновременно использован более чем одним <strong>потоком выполнения</strong>.</p>
+<div class="figure align-center" id="id53">
+<a class="reference internal image-reference" href="../../_images/Critical_Section.png"><img alt="Рис 12. Критические секции в потоках процесса" src="../../_images/Critical_Section.png" style="width: 750px;" /></a>
+<p class="caption"><span class="caption-text">Рис 12. Критические секции в потоках процесса</span><a class="headerlink" href="#id53" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Может возникнуть такая ситуация, когда один поток, <strong>«потребитель»</strong>, начинает использовать данные, которые должен подготовить другой поток, <strong>«производитель»</strong>, но этот производитель ещё не закончил их подготовку и снялся с исполнения. Таким образом, «потребитель» использует некорректные данные, что с высокой долей вероятности приведёт к ошибке.</p>
+<p>Данная проблема решается с помощью <strong>механизма блокировок</strong> – когда поток, получивший доступ к ресурсу, блокирует его, не давая другим потокам пользоваться этим захваченным ресурсом до разблокировки. То есть, если один поток хочет захватить (заблокировать) ресурс, а он уже занят другим потоком, то первый будет ожидать пока этот другой поток-владелец сам не освободит этот ресурс.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Все эти механизмы обеспечиваются операционной системой</p>
+</div>
+<p>Чтобы лучше это понять, можно обратиться к аналогии с туалетом — им может пользоваться только один человек. Если другой хочет им воспользоваться, то ему нужно дождаться когда его освободит уже им пользующийся.</p>
+</div>
+<div class="section" id="deadlock">
+<h3><a class="toc-backref" href="#id79">Deadlock - взаимная блокировка</a><a class="headerlink" href="#deadlock" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Из-за блокировки, захвата ресурса может возникнуть другая проблема: <strong>Deadlock</strong> - взаимная блокировка.</p>
+<div class="figure align-center" id="id54">
+<a class="reference internal image-reference" href="../../_images/Deadlock_analogy.jpg"><img alt="Рис 13. Аналогия пробки на перекрёстке с Deadlock" src="../../_images/Deadlock_analogy.jpg" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Рис 13. Аналогия пробки на перекрёстке с Deadlock</span><a class="headerlink" href="#id54" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p><strong>Deadlock</strong> — ситуация, при которой несколько потоков находятся в состоянии ожидания ресурсов, занятых друг другом, и ни один из них не может продолжать свое выполнение.</p>
+<div class="section" id="deadlock-a">
+<h4>Пример Deadlock’a на псевдокоде<a class="headerlink" href="#deadlock-a" title="Ссылка на этот заголовок">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 47%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Шаг</p></th>
+<th class="head"><p>Поток 1</p></th>
+<th class="head"><p>Поток 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>Хочет захватить A и B, начинает с A</p></td>
+<td><p>Хочет захватить A и B, начинает с B</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>lock(A) — Захват А</p></td>
+<td><p>lock(B) — Захват B</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>lock(B) — Ожидает освобождения ресурса B</p></td>
+<td><p>lock(A) — Ожидает освобождения ресурса A</p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td colspan="2"><p><strong>DEADLOCK –&gt; Далее код не выполнится, так как произошел Deadlock в коде выше</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>n</p></td>
+<td><p>unlock(A) — освобждение A</p></td>
+<td><p>unlock(B) — освобждение B</p></td>
+</tr>
+<tr class="row-odd"><td><p>n+1</p></td>
+<td><p>unlock(B) — освобждение B</p></td>
+<td><p>unlock(A) — освобждение A</p></td>
+</tr>
+</tbody>
+</table>
+<p>Схематично, Deadlock можно изобразить так:</p>
+<div class="figure align-center" id="id55">
+<a class="reference internal image-reference" href="../../_images/Deadlock.png"><img alt="Рис 14. Deadlock" src="../../_images/Deadlock.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Рис 14. Deadlock</span><a class="headerlink" href="#id55" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Проблема Deadlock-ов решаема и существует множество способов сделать это - начиная от недопущения подобных ситуаций в самом коде программы, заканчивая механизмами операционной системы, которые разрешают подобные ситуации. Но, однозначно исключить вероятность возникновения подобных ситуаций нельзя. Однако, это отдельная достаточно большая тема.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id35">
+<h2><a class="toc-backref" href="#id80">Адреса и управление памятью</a><a class="headerlink" href="#id35" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Тема адресации очень сложна, поэтому здесь я лишь проведу краткий обзор общей технологии.</p>
+<dl class="simple">
+<dt>Существует два вида адресов:</dt><dd><ul class="simple">
+<li><p>Физический адрес – непосредственно адрес внутри микросхемы памяти, который передаётся по шине памяти.</p></li>
+<li><p>Логический адрес – тот адрес, которым оперирует процесс.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Чтобы отобразить логический адрес в физический, существует специальный <strong>аппаратный механизм</strong>.</p>
+<dl class="simple">
+<dt>В соответствии с этим, процессор может работать в двух режимах:</dt><dd><ol class="arabic simple">
+<li><p>Реальный режим</p></li>
+<li><p>Защищенный режим</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<div class="section" id="id36">
+<h2><a class="toc-backref" href="#id81">Итог</a><a class="headerlink" href="#id36" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Начав с базовой архитектуры и небольшой истории развития компьютера, мы разобрали причины появления такого комплекса программ как <strong>операционная система</strong> и выделили главную её цель – <strong>обеспечение согласованного доступа к ресурсам компьютера множеству пользователям этих ресурсов, а также управление как самими ресурсами, так и пользователями</strong>.</p>
+<div class="section" id="id37">
+<h3><a class="toc-backref" href="#id82">Основные механизмы (сервисы)</a><a class="headerlink" href="#id37" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Рассмотрели основные механизмы реализации этой цели: <em>Scheduler (планировщик), Inter Process Communication (межпроцессное взаимодействие), Memory manager (управление памятью) и другие</em>.</p>
+</div>
+<div class="section" id="id38">
+<h3><a class="toc-backref" href="#id83">Абстракции</a><a class="headerlink" href="#id38" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Ряд абстракций, которые вводит ОС: <em>Process (процесс), Thread (поток исполнения), File (файл)</em>.</p>
+</div>
+<div class="section" id="id39">
+<h3><a class="toc-backref" href="#id84">Заключение</a><a class="headerlink" href="#id39" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Ух, и вот наконец-то я закончил писать этот материал. Надеюсь, вам было интересно и полезно.</p>
+<p>Если вы хотите как-то дополнить материал, дать критику по его содержанию или структуре – пожалуйста, пишите в Issue <a class="reference external" href="https://github.com/Kalashnikov-Ivan/My_study">данного репозитория</a> поднимая ту или иную тему для обсуждения и доработки.</p>
+<p>Также, вы можете сделать Fork данного репозитория и после внести свои дополнения с помощью Pull Request. Спасибо за внимание!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Kalashnikov Ivan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
