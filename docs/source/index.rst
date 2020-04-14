@@ -14,7 +14,7 @@ Index - корень сайта
 --------------------------
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 4
 
    main
    topics

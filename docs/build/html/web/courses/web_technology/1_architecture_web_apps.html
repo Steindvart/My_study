@@ -183,6 +183,294 @@
             
   <div class="section" id="web">
 <h1><span class="section-number">1. </span>Архитектура Web приложений<a class="headerlink" href="#web" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>Web-приложение</strong> – <em>клиент-серверное</em> приложение, в котором клиент взаимодействует с веб-сервером при помощи браузера.</p>
+<div class="section" id="internet-www">
+<h2><span class="section-number">1.1. </span>Разделение между Internet и WWW<a class="headerlink" href="#internet-www" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="internet">
+<h3><span class="section-number">1.1.1. </span>Что такое Internet?<a class="headerlink" href="#internet" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>Internet</strong> – глобальная система объединённых компьютерных сетей. Другими словами - <strong>сеть сетей</strong>.</p>
+<p>Инфраструктура, которая позволяет передавать любые типы данных между сетями и устройствами, подключенными к ней.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/1024px-Internet_map_1024.jpg"><img alt="Частичная карта Интернета" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/1024px-Internet_map_1024.jpg" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">Частичная карта Интернета</span><a class="headerlink" href="#id11" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Эта инфраструктура поддерживается <strong>сетевыми протоколами</strong> – алгоритмами, которые реализуют различные сервисы по передачи данных.</p>
+<p>Существует несколько стеков этих протоколов, основные: <strong>OSI</strong> и <strong>ICP/IP</strong>. Рассмотрим на примере ICP/IP.</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="../../../_images/TCP_IP_0.png"><img alt="Стэк TCP/IP (представлены не все протоколы)" src="../../../_images/TCP_IP_0.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Стэк TCP/IP (представлены не все протоколы)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Из этого множества протоколов и уровней, в Web’e нас больше всего интересуют протоколы <em>прикладного</em> уровня.
+В частности: <strong>HTTP, FTP, DNS, SSH, P2P</strong>. Но для полноты понимания немного затронем и другие уровни.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<dl class="simple">
+<dt><strong>Прикладной уровень:</strong></dt><dd><ul class="simple">
+<li><p>HTTP – протокол передачи гипертекстовых документов.</p></li>
+<li><p>FTP – протокол передачи файлов.</p></li>
+<li><p>DNS – доменная система имён.</p></li>
+<li><p>SSH – удалённое управление операционной системой.</p></li>
+<li><p>P2P (Peer-to-Peer) – каждый узел является как клиентом, так и выполняет функции сервера.</p></li>
+</ul>
+</dd>
+<dt><strong>Транспортный уровень:</strong></dt><dd><ul class="simple">
+<li><p>TCP – надежная последовательная передача данных. С подтверждением получения.</p></li>
+<li><p>UDP – не надежная передача данных. Без подтверждения получения.</p></li>
+</ul>
+</dd>
+<dt><strong>Сетевой уровень:</strong></dt><dd><ul class="simple">
+<li><p>IP – глобальная адресация, передача в разнородной среде.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="www">
+<h3><span class="section-number">1.1.2. </span>Что такое WWW?<a class="headerlink" href="#www" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>World Wide Web</strong> – распределённая система взаимосвязанных, посредством гиперссылок, документов и их ресурсов, располагающихся на машинах подключенных к Internet. Эта система посредством протоколов серверного и клиентского ПО обеспечивает доступ к этим документам.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Распределённая – означает, что физически, документы и их ресурсы могут располагаться на разных устройствах.</p>
+</div>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../../../_images/hyperlinks.png"><img alt="Связанность документов и ресурсов посредством гиперссылок" src="../../../_images/hyperlinks.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Связанность документов и ресурсов посредством гиперссылок</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">1.1.3. </span>Различия<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Всё просто.</p>
+<p>Internet – это <strong>инфраструктура</strong>.</p>
+<p>WWW – это <strong>сервис</strong>.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">1.2. </span>Клиент-серверная архитектура<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Клиент-серверная архитектура – означет, что приложение исполняется одновременно на <strong>двух машинах</strong>: на клиенте и на сервере.</p>
+<p><strong>Web-клиенты</strong> работают на компьютерах конечных пользователей. Задача Web-клиентов состоит в <strong>получении и отображении
+документов</strong>.</p>
+<p><strong>Web-сервера</strong> работают (как правило) на серверах в датацентрах. Их задача заключается в <strong>хранении (или генерации) и отдачи
+документов</strong>.</p>
+</div>
+<div class="section" id="web-mime">
+<h2><span class="section-number">1.3. </span>Типы Web-документов (MIME-типы)<a class="headerlink" href="#web-mime" title="Ссылка на этот заголовок">¶</a></h2>
+<p><strong>MIME-типы</strong> – типы данных, которые могут быть переданы посредством сети Интернет в Web. Нужны для того, чтобы браузер знал как обрабатывать тот или иной документ.</p>
+<p>Расширения файлов играют второстепенную роль.</p>
+<p><strong>Документы могут быть:</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><em>Статические:</em></dt><dd><ul>
+<li><p>Это файлы на дисках сервера</p></li>
+<li><p>Как правило, обладают постоянным адресом</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em>Динамические:</em></dt><dd><ul>
+<li><p>Создаются на каждый запрос</p></li>
+<li><p>Содержимое зависит от времени и пользователя</p></li>
+<li><p>Адрес может быть постоянным или меняться</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="mime">
+<h3><span class="section-number">1.3.1. </span>Сокращенный перечень MIME-типов<a class="headerlink" href="#mime" title="Ссылка на этот заголовок">¶</a></h3>
+<ul>
+<li><dl>
+<dt><strong>text</strong></dt><dd><ul class="simple">
+<li><p>text/html – основной тип для гипертекстовых документов. Разметка текста, пользовательского интерфейса</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/css/style.css&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://code.jquery.com/jquery-2.1.4.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            Some text with <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;pic/img1.png&quot;</span><span class="p">&gt;</span>
+            and <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#yes&quot;</span><span class="p">&gt;</span>hyperlinks<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>text/css – стили, которые применяются к html-документам. Определяют внешний вид</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">70</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="kc">sans-serif</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>text/javascript – скрипты для документов</p></li>
+<li><p>text/xml – для разметки самих данных. Служит для обмена данными между приложениями</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">response</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ok&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">friends</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">friend</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;v.pupkin&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">friend</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;a.pushkin&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">friend</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;3&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;n.tesla&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">friends</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">response</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>image и video</strong></dt><dd><ul class="simple">
+<li><p>image/png</p></li>
+<li><p>image/jpeg</p></li>
+<li><p>video/mp4</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>application</strong></dt><dd><ul class="simple">
+<li><p>application/json – для разметки самих данных. Служит для обмена данными между приложениями, более совершенная версия, чем xml</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;friends&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;v.pupkin&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;a.pushkin&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;n.tesla&quot;</span> <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>application/javascript</p></li>
+<li><p>и многие другие…</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a class="reference external" href="https://www.iana.org/assignments/media-types/media-types.xhtml">Полный список MIME-типов</a></p>
+</div>
+</div>
+<div class="section" id="url">
+<h2><span class="section-number">1.4. </span>URL - С помощью чего ссылаются<a class="headerlink" href="#url" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference external" href="https://ru.wikipedia.org/wiki/URL">URL</a> (Uniform Resource Locator) – определитель местонахождения ресурса, документа. Другими словами – <strong>адрес</strong>.</p>
+<p>Структура у него следующая:</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../../../_images/URL.png"><img alt="Структура URL" src="../../../_images/URL.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Структура URL</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p><strong>Протокол</strong> – с помощью какого протокола загружать.</p>
+<p><strong>Параметры</strong> – список определённых значений, которые передаются вместе с запросом.</p>
+<p><strong>Якорь</strong> – определённое место в самом документе (Web-страничке).</p>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">1.4.1. </span>Абсолютные и относительные URL<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
+<p><strong>Абсолютный</strong> – полный и точный адрес.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://server.org/1.html">http://server.org/1.html</a> - абсолютный</p></li>
+<li><p>//server.org/1.html - schemeless, для гибкой подстройки протокола http или https</p></li>
+</ul>
+<p><strong>Относительный</strong> – адрес, который высчитывается браузером в зависимости от текущего адреса.</p>
+<ul class="simple">
+<li><p>/another/page.html?a=1 - путь от корня домена</p></li>
+<li><p>pictures/1.png - от URL текущего документа</p></li>
+<li><p>?a=1&amp;b=2 - параметры, от URL текущего документа</p></li>
+<li><p>#part2 - якорь, в пределах текущего документа</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">1.4.2. </span>Правила разрешения URL<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Рассмотрим на примере – <strong>жирным</strong> выделено, какая часть добавляется браузером при обработке относительных адресов:</p>
+<p><a class="reference external" href="https://site.com/path/page.html">https://site.com/path/page.html</a> - основной документ</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="../../../_images/get_URL.png"><img alt="Преобразования относительных URL" src="../../../_images/get_URL.png" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Преобразования относительных URL</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><span class="section-number">1.5. </span>Как документы могут ссылаться друг на друга?<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="html">
+<h3><span class="section-number">1.5.1. </span>HTML - гиперссылки<a class="headerlink" href="#html" title="Ссылка на этот заголовок">¶</a></h3>
+<p>С помощью специального тега <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code> и его атрибута <code class="docutils literal notranslate"><span class="pre">href=&quot;&lt;URL&gt;&quot;</span></code>.</p>
+<p>Пример:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Узнать больше о <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://ru.wikipedia.org/wiki/URL&quot;</span><span class="p">&gt;</span>URL<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Результат:</dt><dd><p>Узнать больше о <a class="reference external" href="https://ru.wikipedia.org/wiki/URL">URL</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h3><span class="section-number">1.5.2. </span>HTML - формы<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h3>
+<p>С помщью тега <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span></code> и его атрибута <code class="docutils literal notranslate"><span class="pre">action=&quot;&lt;URL&gt;&quot;</span></code> – куда будет отправлен запрос этой формы.</p>
+<p>Пример:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;https://duckduckgo.com/&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;q&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;ia&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;images&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Найти<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Результат:</p>
+<form action="https://duckduckgo.com/">
+    <input type="text" name="q" value="">
+    <input type="hidden" name="ia" value="images">
+    <button type="submit">Найти</a>
+</form></div>
+<div class="section" id="id10">
+<h3><span class="section-number">1.5.3. </span>HTML - ресурсы<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h3>
+<p>URL-адреса как ссылки на ресурсы документа.</p>
+<p>Пример:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/css/index.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://code.jquery.com/jquery-2.1.4.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;pictures/network.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="css">
+<h3><span class="section-number">1.5.4. </span>CSS - ресурсы<a class="headerlink" href="#css" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Подключение ресурсов через использование URL в CSS файлах.</p>
+<p>Пример:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Загрузка фонового изображения*/</span>
+<span class="p">.</span><span class="nc">slide</span> <span class="p">{</span>
+    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">../pictures/network.png</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c">/* Загрузка шрифта */</span>
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="nt">Terminus</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="nt">fonts</span><span class="o">/</span><span class="nt">terminus</span><span class="p">.</span><span class="nc">ttf</span><span class="o">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="javascript-url">
+<h3><span class="section-number">1.5.5. </span>JavaScript - прямое указание URL<a class="headerlink" href="#javascript-url" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Пример:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">saveApiUrl</span> <span class="o">=</span> <span class="s1">&#39;/items/save/&#39;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">newTitle</span> <span class="o">=</span> <span class="s1">&#39;Duck tales&#39;</span><span class="p">;</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+    <span class="nx">url</span><span class="o">:</span> <span class="nx">saveApiUrl</span><span class="p">,</span>
+    <span class="nx">data</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">title</span><span class="o">:</span> <span class="nx">newTitle</span> <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 

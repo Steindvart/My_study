@@ -1,4 +1,4 @@
-Сайт проекта - `https://my-study-st.readthedocs.io/ru/latest/main.html <https://my-study-st.readthedocs.io/ru/latest/main.html>`_
+Сайт проекта - `https://my-study-st.readthedocs.io/ru/latest/main.html <https://my-study-st.readthedocs.io/main.html>`_
 
 Что это за репозиторий?
 ------------------------------------
@@ -11,8 +11,9 @@
 Содержание
 ------------------------------------
 
-* `Операционные системы <https://my-study-st.readthedocs.io/ru/latest/os_main.html>`_
-* `Математика <https://my-study-st.readthedocs.io/ru/latest/math.html>`_
+* `Операционные системы <https://my-study-st.readthedocs.io/OS/os_main.html>`_
+* `Математика <https://my-study-st.readthedocs.io/Math/math_main.html>`_
+* `Web-технологии <https://my-study-st.readthedocs.io/Web/web_main.html>`_
 
 
 Какой во всём этом смысл?
