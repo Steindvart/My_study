@@ -195,12 +195,12 @@
 <p class="caption"><span class="caption-text">Частичная карта Интернета</span><a class="headerlink" href="#id11" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>Эта инфраструктура поддерживается <strong>сетевыми протоколами</strong> – алгоритмами, которые реализуют различные сервисы по передачи данных.</p>
-<p>Существует несколько стеков этих протоколов, основные: <strong>OSI</strong> и <strong>ICP/IP</strong>. Рассмотрим на примере ICP/IP.</p>
+<p>Существует несколько стеков сетевых протоколов, основные: <strong>OSI</strong> и <strong>ICP/IP</strong>. Рассмотрим на примере ICP/IP.</p>
 <div class="figure align-center" id="id12">
 <a class="reference internal image-reference" href="../../../_images/TCP_IP_0.png"><img alt="Стэк TCP/IP (представлены не все протоколы)" src="../../../_images/TCP_IP_0.png" style="width: 550px;" /></a>
 <p class="caption"><span class="caption-text">Стэк TCP/IP (представлены не все протоколы)</span><a class="headerlink" href="#id12" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
-<p>Из этого множества протоколов и уровней, в Web’e нас больше всего интересуют протоколы <em>прикладного</em> уровня.
+<p>Из этого множества протоколов и уровней, в Web’e нас больше всего интересуют протоколы <em>прикладного</em> уровня (<em>приложений</em>).
 В частности: <strong>HTTP, FTP, DNS, SSH, P2P</strong>. Но для полноты понимания немного затронем и другие уровни.</p>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
@@ -209,7 +209,7 @@
 <li><p>HTTP – протокол передачи гипертекстовых документов.</p></li>
 <li><p>FTP – протокол передачи файлов.</p></li>
 <li><p>DNS – доменная система имён.</p></li>
-<li><p>SSH – удалённое управление операционной системой.</p></li>
+<li><p>SSH – защищенное подключение к консоли, удалённое управление операционной системой.</p></li>
 <li><p>P2P (Peer-to-Peer) – каждый узел является как клиентом, так и выполняет функции сервера.</p></li>
 </ul>
 </dd>
@@ -227,10 +227,10 @@
 </div>
 <div class="section" id="www">
 <h3><span class="section-number">1.1.2. </span>Что такое WWW?<a class="headerlink" href="#www" title="Ссылка на этот заголовок">¶</a></h3>
-<p><strong>World Wide Web</strong> – распределённая система взаимосвязанных, посредством гиперссылок, документов и их ресурсов, располагающихся на машинах подключенных к Internet. Эта система посредством протоколов серверного и клиентского ПО обеспечивает доступ к этим документам.</p>
+<p><strong>World Wide Web</strong> – распределённая система взаимосвязанных, посредством гиперссылок, документов и их ресурсов, располагающихся на машинах подключенных к Internet. Эта система посредством протоколов серверного и клиентского ПО обеспечивает доступ к этим вазимосвязанным документам.</p>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>Распределённая – означает, что физически, документы и их ресурсы могут располагаться на разных устройствах.</p>
+<p>Распределённая – означает, что физически, документы и их ресурсы могут располагаться на разных серверах.</p>
 </div>
 <div class="figure align-center" id="id13">
 <a class="reference internal image-reference" href="../../../_images/hyperlinks.png"><img alt="Связанность документов и ресурсов посредством гиперссылок" src="../../../_images/hyperlinks.png" style="width: 550px;" /></a>
@@ -251,10 +251,9 @@
 <div class="section" id="id2">
 <h2><span class="section-number">1.2. </span>Клиент-серверная архитектура<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Клиент-серверная архитектура – означет, что приложение исполняется одновременно на <strong>двух машинах</strong>: на клиенте и на сервере.</p>
-<p><strong>Web-клиенты</strong> работают на компьютерах конечных пользователей. Задача Web-клиентов состоит в <strong>получении и отображении
-документов</strong>.</p>
+<p><strong>Web-клиенты</strong> работают на компьютерах конечных пользователей. Задача Web-клиентов состоит в <strong>формировании и отправки запроса, а далее в получении и отображении полученного ответа - документа</strong>.</p>
 <p><strong>Web-сервера</strong> работают (как правило) на серверах в датацентрах. Их задача заключается в <strong>хранении (или генерации) и отдачи
-документов</strong>.</p>
+документов</strong>, то есть <strong>отвечать на запросы</strong>.</p>
 <div class="figure align-center" id="id14">
 <a class="reference internal image-reference" href="../../../_images/client_host.jpg"><img alt="Схема клиент-серверной модели" src="../../../_images/client_host.jpg" style="width: 550px;" /></a>
 <p class="caption"><span class="caption-text">Схема клиент-серверной модели</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
@@ -271,7 +270,7 @@
 </div>
 <div class="section" id="web-mime">
 <h2><span class="section-number">1.3. </span>Типы Web-документов (MIME-типы)<a class="headerlink" href="#web-mime" title="Ссылка на этот заголовок">¶</a></h2>
-<p><strong>MIME-типы</strong> – типы данных, которые могут быть переданы посредством сети Интернет в Web. Нужны для того, чтобы браузер знал как обрабатывать тот или иной документ.</p>
+<p><strong>MIME-типы</strong> – типы данных, которые могут быть переданы, посредством сети Интернет, в Web. Нужны для того, чтобы браузер знал как обрабатывать тот или иной документ.</p>
 <p>Расширения файлов играют второстепенную роль.</p>
 <p><strong>Документы могут быть:</strong></p>
 <ul class="simple">
@@ -286,7 +285,7 @@
 <li><dl class="simple">
 <dt><em>Динамические:</em></dt><dd><ul>
 <li><p>Создаются на каждый запрос</p></li>
-<li><p>Содержимое зависит от времени и пользователя</p></li>
+<li><p>Содержимое зависит от параметров запроса. Например, времени и пользователя.</p></li>
 <li><p>Адрес может быть постоянным или меняться</p></li>
 </ul>
 </dd>
@@ -387,7 +386,7 @@
 </div>
 </div>
 <div class="section" id="url">
-<h2><span class="section-number">1.4. </span>URL - С помощью чего ссылаются<a class="headerlink" href="#url" title="Ссылка на этот заголовок">¶</a></h2>
+<h2><span class="section-number">1.4. </span>URL - Связующие звено<a class="headerlink" href="#url" title="Ссылка на этот заголовок">¶</a></h2>
 <p><a class="reference external" href="https://ru.wikipedia.org/wiki/URL">URL</a> (Uniform Resource Locator) – определитель местонахождения ресурса, документа. Другими словами – <strong>адрес</strong>.</p>
 <p>Структура у него следующая:</p>
 <div class="figure align-center" id="id15">
@@ -403,11 +402,13 @@
 <div class="section" id="id5">
 <h3><span class="section-number">1.4.1. </span>Абсолютные и относительные URL<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h3>
 <p><strong>Абсолютный</strong> – полный и точный адрес.</p>
+<p><em>Примеры:</em></p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://server.org/1.html">http://server.org/1.html</a> - абсолютный</p></li>
 <li><p>//server.org/1.html - schemeless, для гибкой подстройки протокола http или https</p></li>
 </ul>
 <p><strong>Относительный</strong> – адрес, который высчитывается браузером в зависимости от текущего адреса.</p>
+<p><em>Примеры:</em></p>
 <ul class="simple">
 <li><p>/another/page.html?a=1 - путь от корня домена</p></li>
 <li><p>pictures/1.png - от URL текущего документа</p></li>
