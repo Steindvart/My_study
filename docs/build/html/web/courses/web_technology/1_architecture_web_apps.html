@@ -236,6 +236,10 @@
 <a class="reference internal image-reference" href="../../../_images/hyperlinks.png"><img alt="Связанность документов и ресурсов посредством гиперссылок" src="../../../_images/hyperlinks.png" style="width: 550px;" /></a>
 <p class="caption"><span class="caption-text">Связанность документов и ресурсов посредством гиперссылок</span><a class="headerlink" href="#id13" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p><strong>Историческая справка</strong> – изначально, WWW разрабатывалась как система ссылок в научном сообществе.</p>
+</div>
 </div>
 <div class="section" id="id1">
 <h3><span class="section-number">1.1.3. </span>Различия<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
@@ -251,6 +255,19 @@
 документов</strong>.</p>
 <p><strong>Web-сервера</strong> работают (как правило) на серверах в датацентрах. Их задача заключается в <strong>хранении (или генерации) и отдачи
 документов</strong>.</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../../../_images/client_host.jpg"><img alt="Схема клиент-серверной модели" src="../../../_images/client_host.jpg" style="width: 550px;" /></a>
+<p class="caption"><span class="caption-text">Схема клиент-серверной модели</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<dl class="simple">
+<dt><strong>Преимущества подхода</strong></dt><dd><ul class="simple">
+<li><p>Открытый протокол – очень хорошо документирован и имеет много реализаций.</p></li>
+<li><p>Стандартный клиент – самый распространённый клиен - браузер.</p></li>
+<li><p>Прозрачный способ взаимодействия приложений – один ресурс может ссылаться на другой.</p></li>
+<li><p>Распределенная и масштабируемая система – физически, одно преложение может быть запущенно на нескольких серверах.</p></li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="web-mime">
 <h2><span class="section-number">1.3. </span>Типы Web-документов (MIME-типы)<a class="headerlink" href="#web-mime" title="Ссылка на этот заголовок">¶</a></h2>
@@ -281,9 +298,10 @@
 <ul>
 <li><dl>
 <dt><strong>text</strong></dt><dd><ul class="simple">
-<li><p>text/html – основной тип для гипертекстовых документов. Разметка текста, пользовательского интерфейса</p></li>
+<li><p><strong>text/html</strong> – основной тип для гипертекстовых документов. Разметка текста, пользовательского интерфейса</p></li>
 </ul>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/css/style.css&quot;</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://code.jquery.com/jquery-2.1.4.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -298,7 +316,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>text/css – стили, которые применяются к html-документам. Определяют внешний вид</p></li>
+<li><p><strong>text/css</strong> – стили, которые применяются к html-документам. Определяют внешний вид</p></li>
 </ul>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">70</span><span class="kt">%</span><span class="p">;</span>
@@ -312,8 +330,15 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>text/javascript – скрипты для документов</p></li>
-<li><p>text/xml – для разметки самих данных. Служит для обмена данными между приложениями</p></li>
+<li><p><strong>text/javascript</strong> – скрипты для документов</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>text/xml</strong> – для разметки самих данных. Служит для обмена данными между приложениями</p></li>
 </ul>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">response</span> <span class="na">status</span><span class="o">=</span><span class="s">&quot;ok&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">friends</span><span class="p">&gt;</span>
@@ -338,7 +363,7 @@
 </li>
 <li><dl>
 <dt><strong>application</strong></dt><dd><ul class="simple">
-<li><p>application/json – для разметки самих данных. Служит для обмена данными между приложениями, более совершенная версия, чем xml</p></li>
+<li><p><strong>application/json</strong> – для разметки самих данных. Служит для обмена данными между приложениями, более совершенная версия, чем xml</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
@@ -365,9 +390,9 @@
 <h2><span class="section-number">1.4. </span>URL - С помощью чего ссылаются<a class="headerlink" href="#url" title="Ссылка на этот заголовок">¶</a></h2>
 <p><a class="reference external" href="https://ru.wikipedia.org/wiki/URL">URL</a> (Uniform Resource Locator) – определитель местонахождения ресурса, документа. Другими словами – <strong>адрес</strong>.</p>
 <p>Структура у него следующая:</p>
-<div class="figure align-center" id="id14">
+<div class="figure align-center" id="id15">
 <a class="reference internal image-reference" href="../../../_images/URL.png"><img alt="Структура URL" src="../../../_images/URL.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-text">Структура URL</span><a class="headerlink" href="#id14" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Структура URL</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
@@ -394,9 +419,9 @@
 <h3><span class="section-number">1.4.2. </span>Правила разрешения URL<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Рассмотрим на примере – <strong>жирным</strong> выделено, какая часть добавляется браузером при обработке относительных адресов:</p>
 <p><a class="reference external" href="https://site.com/path/page.html">https://site.com/path/page.html</a> - основной документ</p>
-<div class="figure align-center" id="id15">
+<div class="figure align-center" id="id16">
 <a class="reference internal image-reference" href="../../../_images/get_URL.png"><img alt="Преобразования относительных URL" src="../../../_images/get_URL.png" style="width: 550px;" /></a>
-<p class="caption"><span class="caption-text">Преобразования относительных URL</span><a class="headerlink" href="#id15" title="Постоянная ссылка на рисунок">¶</a></p>
+<p class="caption"><span class="caption-text">Преобразования относительных URL</span><a class="headerlink" href="#id16" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 </div>
 </div>
@@ -410,7 +435,7 @@
 </pre></div>
 </div>
 <dl class="simple">
-<dt>Результат:</dt><dd><p>Узнать больше о <a class="reference external" href="https://ru.wikipedia.org/wiki/URL">URL</a></p>
+<dt><strong>Результат:</strong></dt><dd><p>Узнать больше о <a class="reference external" href="https://ru.wikipedia.org/wiki/URL">URL</a></p>
 </dd>
 </dl>
 </div>
@@ -425,7 +450,7 @@
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>Результат:</p>
+<p><strong>Результат:</strong></p>
 <form action="https://duckduckgo.com/">
     <input type="text" name="q" value="">
     <input type="hidden" name="ia" value="images">
