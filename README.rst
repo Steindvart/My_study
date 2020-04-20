@@ -1,4 +1,4 @@
-Сайт проекта - `https://my-study-st.readthedocs.io/ru/latest/main.html <https://my-study-st.readthedocs.io/main.html>`_
+Сайт проекта - `https://my-study-st.readthedocs.io/main.html <https://my-study-st.readthedocs.io/main.html>`_
 
 Что это за репозиторий?
 ------------------------------------
