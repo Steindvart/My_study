@@ -12,3 +12,4 @@
     OS/os_main
     Math/math_main
     Web/web_main
+    Python/intro_processing_py/0_intro.rst
