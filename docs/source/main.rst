@@ -44,6 +44,6 @@
 Как со мной связаться?
 ------------------------------------
 
-* email --> `steindvart.st@gmail.com`_
+* email    --> steindvart.st@gmail.com
 * Telegram --> `@Steindvart <https://t.me/Steindvart>`_
-* Discord --> `Steindvart#1423`_
+* Discord  --> Steindvart#1423
