@@ -11,7 +11,6 @@
 
 .. figure:: ../img/processing/basic_settings/size.png
     :width: 650px
-    :height: 450px
     :align: center
     :alt: Пример исполнения функции size(600, 400)
 
@@ -27,7 +26,6 @@
 
 .. figure:: ../img/processing/basic_settings/strokeWeight.png
     :width: 650px
-    :height: 450px
     :align: center
     :alt: Пример исполнения функции size(600, 400)
 
