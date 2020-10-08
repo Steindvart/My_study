@@ -5,13 +5,15 @@
 ---------------
 Настройка
 """""""""
+size(width, height)
+*******************
 ``size(width, height)`` - задаёт размер окна по ширине (width) и высоте (height).
 
 Например, ``size(600, 400)``. Создаст окно - 600 пикселей в ширину и 400 в высоту.
 
-.. figure:: ../img/processing/example_0.gif
-    :width: 600px
-    :height: 400px
+.. figure:: ../img/processing/basic_settings/size.png
+    :width: 650px
+    :height: 450px
     :align: center
     :alt: Пример исполнения функции size(600, 400)
 
@@ -24,6 +26,14 @@
 ``strokeWeight(weight)`` - задаёт толщину "штриха" (линий и точек).
 
 Например, ``strokeWeight(10)``. Задаст ширину "штриха" - 10 пикселей.
+
+.. figure:: ../img/processing/basic_settings/strokeWeight.png
+    :width: 650px
+    :height: 450px
+    :align: center
+    :alt: Пример исполнения функции size(600, 400)
+
+    Пример исполнения функции strokeWeight() с разными параметрами
 
 .. raw:: html
 
