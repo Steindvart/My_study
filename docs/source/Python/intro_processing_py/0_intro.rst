@@ -88,7 +88,7 @@ Python и Processing
 Например:
 
 .. figure:: ../img/mini_0.png
-    :width: 500px
+    :width: 400px
     :align: center
     :alt: Крокодил Гена и Чебурашка в стиле минимализм
 
