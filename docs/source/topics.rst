@@ -13,4 +13,4 @@
     Math/math_main
     Web/web_main
     Python/py_main.rst
-    Scratch/intro_programming_with_CC/1_beginning.rst
+    Scratch/scratch_main.rst

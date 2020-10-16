@@ -10,6 +10,7 @@ Python, Processing и основы программирования для на�
     :titlesonly:
 
    Введение в Python и Processing <0_intro.rst>
+   Операторы и переменные <1_operators_and_vars.rst>
 
 
 .. raw:: html
@@ -20,6 +21,8 @@ Python, Processing и основы программирования для на�
     :titlesonly:
 
    Processing <pr_docs_commands.rst>
+   Рефлексия <https://forms.gle/XxGkE4bkVBcg47Uv5>
+
 
 .. raw:: html
 
@@ -28,4 +31,4 @@ Python, Processing и основы программирования для на�
 .. toctree::
     :titlesonly:
 
-   SoloLearn - приложение на смартфом для изучения программирования <https://play.google.com/store/apps/details?id=com.sololearn&hl=ru>
+   SoloLearn - приложение на смартфон для изучения программирования <https://play.google.com/store/apps/details?id=com.sololearn&hl=ru>

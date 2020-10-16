@@ -1,6 +1,9 @@
 Команды Processing
 ==================
 
+.. contents:: Содержание
+    :depth: 2
+
 Базовые команды
 ---------------
 Настройка
@@ -10,7 +13,7 @@
 Например, ``size(600, 400)``. Создаст окно - 600 пикселей в ширину и 400 в высоту.
 
 .. figure:: ../img/processing/basic_settings/size.png
-    :width: 350px
+    :width: 450px
     :align: center
     :alt: Пример исполнения функции size(600, 400)
 
@@ -25,7 +28,7 @@
 Например, ``strokeWeight(10)``. Задаст ширину "штриха" - 10 пикселей.
 
 .. figure:: ../img/processing/basic_settings/strokeWeight.png
-    :width: 350px
+    :width: 450px
     :align: center
     :alt: Пример исполнения функции size(600, 400)
 
