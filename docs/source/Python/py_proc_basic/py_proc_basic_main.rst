@@ -2,26 +2,28 @@
 Python, Processing и основы программирования для начинающих
 ============================================================
 
+
 .. raw:: html
 
    <h3>Основные темы</h3>
 
 .. toctree::
-    :titlesonly:
+   :includehidden:
 
-   Введение в Python и Processing <0_intro.rst>
-   Операторы и переменные <1_operators_and_vars.rst>
+   Введение в Python и Processing <0_intro.html>
+   Операторы и переменные <1_operators_and_vars.html>
+
+* `Введение в Python и Processing <0_intro.html>`_
+* `Операторы и переменные <1_operators_and_vars.html>`_
 
 
 .. raw:: html
 
    <h3>Справка</h3>
 
-.. toctree::
-    :titlesonly:
 
-   Processing <pr_docs_commands.rst>
-   Рефлексия <https://forms.gle/XxGkE4bkVBcg47Uv5>
+* `Processing <pr_docs_commands.html>`_
+* `Рефлексия <https://forms.gle/XxGkE4bkVBcg47Uv5>`_
 
 
 .. raw:: html
