@@ -12,5 +12,5 @@
     OS/os_main
     Math/math_main
     Web/web_main
-    Python/intro_processing_py/0_intro.rst
+    Python/py_main.rst
     Scratch/intro_programming_with_CC/1_beginning.rst
